@@ -25,4 +25,4 @@ RUN chown iplayer:iplayer /data -R
 RUN chown iplayer:iplayer /app -R
 USER iplayer
 
-ENTRYPOINT /bin/bash -c "./get_iplayer --pvrscheduler 3600 --output= /data/output"
+ENTRYPOINT /bin/bash -c "./get_iplayer --pvrscheduler 3600"
