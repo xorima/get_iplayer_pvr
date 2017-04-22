@@ -25,4 +25,4 @@ RUN chown iplayer:iplayer /data -R
 RUN chown iplayer:iplayer /app -R
 USER iplayer
 
-ENTRYPOINT /bin/bash -c "./get_iplayer --output '/data/output' --outputtv='/data/output/tv/' --outputradio='/data/output/radio'  --pvrscheduler 3600"
+ENTRYPOINT /bin/bash -c "./get_iplayer --output '/data/output' --outputtv='/data/output/tv/' --outputradio='/data/output/radio' --fileprefix '<nameshort><.senum>' --subdir --subdir-format='<nameshort>/Series <seriesnum>'  --pvrscheduler 3600"
