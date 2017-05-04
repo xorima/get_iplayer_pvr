@@ -11,7 +11,7 @@ WORKDIR /app
 RUN rpm --import http://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro
 RUN rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-1.el7.nux.noarch.rpm
 RUN yum update -y
-RUN yum install perl-libwww-perl perl-LWP-Protocol-https perl-XML-Simple perl-XML-LibXML perl-Env perl-CGI atomicparsley rtmpdump wget -y
+RUN yum install perl-libwww-perl perl-LWP-Protocol-https perl-XML-Simple perl-XML-LibXML perl-Env perl-CGI atomicparsley rtmpdump wget perl-JSON -y
 RUN wget http://johnvansickle.com/ffmpeg/releases/ffmpeg-release-64bit-static.tar.xz
 RUN tar -xf ffmpeg-release-64bit-static.tar.xz
 RUN install -m 777 ffmpeg-*-static/ffmpeg /usr/local/bin
