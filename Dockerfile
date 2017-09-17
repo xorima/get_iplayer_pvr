@@ -20,7 +20,7 @@ RUN install -m 777 ./get_iplayer /usr/local/bin
 RUN chmod 777 ./ffmpeg*
 RUN chmod 777 ./get_iplayer
 
-RUN groupadd -r iplayer -g 3000 && useradd -r -g iplayer iplayer -u 2005 -m -d /data/config/home
+RUN groupadd -r iplayer -g 4000 && useradd -r -g iplayer iplayer -u 2005 -m -d /data/config/home
 RUN chown iplayer:iplayer /data -R
 RUN chown iplayer:iplayer /app -R
 USER iplayer
