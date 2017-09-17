@@ -17,6 +17,7 @@ RUN tar -xf ffmpeg-release-64bit-static.tar.xz
 RUN install -m 777 ffmpeg-*-static/ffmpeg /usr/local/bin
 RUN curl -kLO https://raw.github.com/get-iplayer/get_iplayer/master/get_iplayer
 RUN install -m 777 ./get_iplayer /usr/local/bin
+RUN curl -L https://cpanmin.us | perl - -M https://cpan.metacpan.org -n Mojolicious
 RUN chmod 777 ./ffmpeg*
 RUN chmod 777 ./get_iplayer
 
